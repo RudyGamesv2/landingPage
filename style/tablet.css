@@ -9,3 +9,7 @@
 .nav-btn{
     display: none;
 }
+
+.offer-box:hover{
+    transform: scale(1.3);
+}

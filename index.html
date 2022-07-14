@@ -8,18 +8,20 @@
     <meta name="description" content="Tutaj pojawia się wymyślona przez klienta zajawka">
     <link rel="stylesheet" href="style/reset.css"> 
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/tablet.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="style/tablet.css" media="(min-width: 1000px)">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 
-    <!-- animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
+
+    <a class="skip-nav" href="#home">Pomiń Menu</a>
+
     <nav class="nav">
         <div class="container">
             <a class="nav-company" href="#">Nazwa firmy</a>
@@ -30,12 +32,6 @@
                 <a class="nav-item" href="#contact">Kontakt</a>
 
             </div>
-            <!-- <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul> -->
     
             <button class="burger">
                 <div class="line"></div>
@@ -50,7 +46,7 @@
     <section class="home" id="home">
         <div class="home-shadow">
             <div class="container">
-                <div class="home-text" data-aos="fade-up" data-aos-duration="1200">
+                <div class="home-text">
                     <h1>Hasło Reklamowe</h1>
                     <h2>Opis usługi firmy</h2>
                     <button>Przycisk</button>
@@ -58,12 +54,11 @@
             </div>
             
         </div>
-        <!-- <img src="https://via.placeholder.com/1920x900.png/a59090/000000?Text=960x480" alt=""> -->
     </section>
 
     <section class="offer" id="offer">
         <div class="container">
-            <h1 data-aos="fade-up" data-aos-duration="1200">Sprawdź naszą ofertę</h1>
+            <h1>Sprawdź naszą ofertę</h1>
         
             <div class="offer-list">
                 <div class="offer-box">
@@ -138,11 +133,5 @@
 </body>
 <script src="script/script.js"></script>
 <script src="https://kit.fontawesome.com/58309639ce.js" crossorigin="anonymous"></script>
-
-<!-- animation -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 </html>
