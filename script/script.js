@@ -1,9 +1,9 @@
-const mobileNav = document.querySelector('.nav-links');
-const burgerIcon = document.querySelector('.burger');
+$(".hamburger").click(function(){
+    $(this).toggleClass("active")
+    $(".navigation-menu").toggleClass("active");
+});
 
-
-
-burgerIcon.addEventListener('click', function(){
-    mobileNav.classList.toggle('active');
-    burgerIcon.classList.toggle('active');
+$(".navigation-item").click(function(){
+    $(".hamburger").toggleClass("active")
+    $(".navigation-menu").toggleClass("active");
 })

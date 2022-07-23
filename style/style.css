@@ -49,168 +49,189 @@ p{
 
 
 
-/* =========================== navigation  =========================== */
-
-nav{
+/* =========================== navigation =========================== */
+header{
+    height: 90px;
+    background: #292e2e;
+    font-family: "Open Sans",sans-serif;
     position: fixed;
     width: 100%;
-    background-color: #292e2e;
-    
-    
-}
-nav a{
-    color: white;
-    text-decoration: none;
 }
 
-.nav-btn{
-    width: 25px;
-    color: white;
-}
-.nav-links{
-    display: none;
-}
-.nav-company{
-    font-weight: 600;
-}
-
-nav .container{
+ 
+.inner-width{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
-    height: 90px;
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
 }
-/* .nav-links{
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-} */
-.nav-links a{
-    transition: 1s all;
+ 
+.inner-width .nav-company{
+  text-decoration: none;
+  color: #fff;
 }
-.nav-links a:hover{
-    transform: scale(1.3);
-    color: #c0a0dc;
-}  
 
-.nav-company{
-    transition: 1s all;
-}
 .nav-company:hover{
     text-decoration: underline;
 }
-
-/* ==================burger menu for mobile =======================*/
-
-
-.hide{
-    display: none;
+ 
+ 
+.navigation-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
 }
-
-
-.burger {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: none;
+ 
+.navigation-menu a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+  text-decoration: none;
 }
-
-.line {
-    width: 3em;
-    height: .3em;
-    background: #c0a0dc;;
-    margin: .7em;
-    border-radius: 20px;
-    transition: .3s ease-in-out;
+ 
+.navigation-menu a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
 }
+ 
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+ 
+.home-nav{
+  color: #ff6b6b;
+}
+ 
+.offer-nav{
+  color: #0abde3;
+}
+ 
+.contact-nav{
+  color: #1dd1a1;
+}
+ 
+.hamburger{
+  position: relative;
+  float: right;
+  height: 90px;
+  line-height: 90px;
+  color: #fff;
+  font-size: 26px;
+  display: none ;
+  cursor: pointer;
+}
+ 
+ 
+@media screen and (max-width:700px) {
+  /* .hamburger{
+    display: block !important;
+  } */
+    .hamburger {
+	    height: 60px;
+	    width: 60px;
+	    display: inline-block ;
+	    border: 3px solid white;
+	    border-radius: 50%;
+	    position: relative;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    z-index: 100;
+	    cursor: pointer;
+	    transform: scale(0.8);
+	    margin-right: 20px;
+    }
+    .hamburger:after {
+    	position: absolute;
+    	content: '';
+    	height: 100%;
+    	width: 100%;
+    	border-radius: 50%;
+    	border: 3px solid white;
+    	animation: hamburger_puls 1s ease infinite;
+    }
+    .hamburger .bar {
+    	height: 2px;
+    	width: 30px;
+    	position: relative;
+    	background-color: white;
+    	z-index: -1;
+    }
+    .hamburger .bar::after,
+    .hamburger .bar::before {
+    	content: '';
+    	position: absolute;
+    	height: 100%;
+    	width: 100%;
+    	left: 0;
+    	background-color: white;
+    	transition: 0.3s ease;
+    	transition-property: top, bottom;
+    }
+    .hamburger .bar::after {
+    	top: 8px;
+    }
+    .hamburger .bar::before {
+    	bottom: 8px;
+    }
+    .hamburger.active .bar::before {
+    	bottom: 0;
+    }
+    .hamburger.active .bar::after {
+    	top: 0;
+    }
 
-
-
-@media only screen and (max-width: 1000px) {
-
-    .nav-links {
-        list-style-type: none;
+    .navigation-menu{
+        position: absolute;
         display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        justify-content: space-around;
-        } 
-
-    .nav-item::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: .15em;
-        border-radius: 10px;
-        transition: .3s ease-in-out;
-    }
-    
-     /* .nav-item:hover::after {
-        width: 100%;
-    }  */
-
-    .burger {
-        display: block;
-        transition: .3s ease-in-out;
-    }
-
-    .burger.active .line:first-child {
-        transform: translateY(-300px);
-    }
-
-    .burger.active .line:nth-child(2) {
-        transform: rotate(-405deg) translateY(8px);
-    }
-
-    .burger.active .line:nth-child(3) {
-        transform: rotate(-320deg) translateY(-10px);
-    }
-
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 8vh;
-        background-color: #1f1e1e;
-        background-color: rgba(30, 31, 30, 0.1);
-        backdrop-filter: blur(1rem);
-        height: 50vh;
         flex-direction: column;
-        text-align: center;
-        transform: translate(100%);
-        transition: .3s ease-in-out;
-        /* z-index: 10; */
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+        left: 100%;
+        top: 0;
+
+        background-color: rgb(31, 30, 30);
+        z-index: 1;
+        overflow-x: hidden;
+        transition: 0.5s ease left;
+    }
+ 
+    .navigation-menu a{
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
     }
 
-    .nav-links.active {
-        transform: translate(0%);
+    .navigation-menu i{
+        font-size: 2rem;
+    }
+ 
+    .navigation-menu.active{
+        left: 0%;
     }
 
-    .nav-item {
-        color: #c0a0dc;;
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-    }
 }
-
-
-@media only screen and (max-width: 760px) {
-    .nav-links{
-        width: 100%;
-    }
-}
-
-/* ================================================ */
 
 /* =========================== home  =========================== */
 
 .home{
     width: 100vw;
     height: calc(100vh - 70px);
-    background-image: url(../img/background10.jpg);
+    background-image: url(/img/background10.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -400,4 +421,20 @@ footer .container{
 
 .skip-nav:focus{
     transform: translateY(0);
+}
+
+
+
+/* =========================== @keyframes  =========================== */
+
+
+@keyframes hamburger_puls {
+    0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
 }

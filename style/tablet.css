@@ -1,15 +1,3 @@
-.nav-links{
-    display: initial;
-}
-
-.nav-links a{
-    margin-right: 20px;
-}
-
-.nav-btn{
-    display: none;
-}
-
 .offer-box:hover{
     transform: scale(1.3);
 }

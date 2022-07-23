@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/tablet.css" media="(min-width: 1000px)">
 
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"> -->
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 
 
 
@@ -22,26 +27,21 @@
 
     <a class="skip-nav" href="#home">Pomiń Menu</a>
 
-    <nav class="nav">
-        <div class="container">
-            <a class="nav-company" href="#">Nazwa firmy</a>
-
-            <div class="nav-links">
-                <a class="nav-item" href="#home">O nas</a>
-                <a class="nav-item" href="#offer">Oferta</a>
-                <a class="nav-item" href="#contact">Kontakt</a>
-
-            </div>
-    
-            <button class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </button>
-
-            <!-- <img class="nav-btn" src="menu.png" alt="menu"> -->
+    <header>
+        <div class="inner-width">
+            <a href="#" class="nav-company">Nazwa Firmy</a>
+            <!-- <i class="menu-toggle-btn fas fa-bars"></i> -->
+            <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+            
+            <nav class="navigation-menu">
+                <a class="navigation-item" href="#home"><i class="fa-solid fa-house home-nav"></i> O nas</a>
+                <a class="navigation-item" href="#offer"><i class="fa-solid fa-align-left offer-nav"></i> Oferta</a>
+                <a class="navigation-item" href="#contact"><i class="fas fa-headset contact-nav"></i> Kontakt</a>
+            </nav>
         </div>
-    </nav>
+    </header>
     
     <section class="home" id="home">
         <div class="home-shadow">
