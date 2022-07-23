@@ -231,7 +231,7 @@ header{
 .home{
     width: 100vw;
     height: calc(100vh - 70px);
-    background-image: url(/img/background10.jpg);
+    background-image: url(../img/background10.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
