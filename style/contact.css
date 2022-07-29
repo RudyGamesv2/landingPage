@@ -76,7 +76,7 @@ form .form-row .textarea{
 .input-data label{
   position: absolute;
   pointer-events: none;
-  bottom: 10px;
+  bottom: 35px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
